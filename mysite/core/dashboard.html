@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+  {% if dashboards %}
+    <p>Dashboard: </p>
+	<div>
+	  {% for dashboard in dashboards %}
+         <div> <img src="media/{{ dashboard }}" ></div>
+	  {% endfor %}
+	</div>
+  {% endif %}
+
+{% endblock %}
